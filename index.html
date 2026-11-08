@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globerus — Un plan sencillo para entrenar con constancia</title>
+  <meta name="description" content="Globerus te da un plan ciclista estructurado según tu objetivo y disponibilidad. Una guía sencilla para entrenar con constancia y mejorar semana a semana.">
+  <meta name="theme-color" content="#121820">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Globerus — Entrena con constancia">
+  <meta property="og:description" content="Un plan ciclista sencillo y estructurado según tu objetivo y el tiempo disponible. La clave es poder mantenerlo con constancia.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="apple-touch-icon" href="img/logo.png">
+</head>
+<body>
+
+
+  <!-- Navegación principal -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <img src="img/logo.png" alt="Globerus Icon" class="brand-logo-img">
+        <span class="logo-text">globerus</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#filosofia">Filosofía</a>
+        <a href="#pantallas">Pantallas</a>
+        <a href="#rodillo">Rodillo con voz</a>
+        <a href="#modos">Modos de entreno</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#faq">Soporte y FAQ</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION CON 3 MÓVILES -->
+  <section class="hero">
+    <div class="container hero-container">
+
+
+      <h1 class="hero-title">
+        Un plan sencillo.<br>
+        <span class="gradient-text">La constancia es lo que te hace mejorar.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Globerus crea un plan estructurado a partir de tu objetivo, tu disponibilidad y tu forma de medir el esfuerzo. No pretende sustituir a un entrenador personal ni complicarte con un sistema profesional: te da una guía clara y sencilla para entrenar de forma regular. Porque para un aficionado, sumar semanas con constancia es lo que realmente cuenta.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#proximamente" onclick="openLaunchModal(event)" class="btn btn-primary btn-lg btn-icon-row btn-google-play">
+          <img src="img/google-play-store-badge.svg" alt="Google Play" class="btn-play-badge-img">
+          <span class="btn-text">Descubre cómo funciona</span>
+        </a>
+      </div>
+
+      <div class="hero-perks">
+        <div class="perk-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span>Si la semana se tuerce: <strong>retoma el plan</strong></span>
+        </div>
+        <div class="perk-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span>Vatios, pulso o <strong>sensaciones (1 al 10)</strong></span>
+        </div>
+        <div class="perk-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span><strong>Cero suscripciones</strong>: un solo pago</span>
+        </div>
+      </div>
+
+      <!-- PORTADA: TRÍO DE TELÉFONOS (3 MÓVILES MOCKUP) -->
+      <div class="hero-phones-wrapper">
+        <div class="hero-phones-glow"></div>
+
+        <!-- Móvil 1: Rodillo con voz (Izquierda) -->
+        <div class="phone-card phone-left" data-title="En rodillo con voz">
+          <div class="phone-caption">
+            <span class="caption-tag">🔊 En el rodillo</span>
+            <span class="caption-text">Voz, cuenta atrás y frases de aliento</span>
+          </div>
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="img/hero-rodillo.jpg" alt="Entrenar en rodillo con voz y temporizador en Globerus" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <!-- Móvil 2: Pantalla Hoy (Centro / Protagonista) -->
+        <div class="phone-card phone-center" data-title="Pantalla Hoy">
+          <div class="phone-caption">
+            <span class="caption-tag">🏔️ Pantalla Hoy</span>
+            <span class="caption-text">Frase motivadora, tu puerto y qué toca hoy</span>
+          </div>
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="img/hero-hoy.jpg" alt="Pantalla principal Hoy con el puerto de la temporada en Globerus" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <!-- Móvil 3: El Puerto de tu temporada (Derecha) -->
+        <div class="phone-card phone-right" data-title="El Puerto de tu temporada">
+          <div class="phone-caption">
+            <span class="caption-tag">📈 Progreso visual</span>
+            <span class="caption-text">Tu temporada dibujada como un puerto real</span>
+          </div>
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="img/hero-puerto.jpg" alt="El puerto de la temporada y progreso en Globerus" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-quote-box">
+        <p class="quote-text">No necesitas entrenar perfecto. Necesitas entrenar con regularidad.</p>
+        <span class="quote-author">— Un plan sencillo que puedas mantener vale más que uno perfecto que acabes abandonando</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN FILOSOFÍA GLOBERA -->
+  <section id="filosofia" class="section section-darker">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill-label">Filosofía Globera</span>
+        <h2>No necesitas el plan perfecto. Necesitas poder mantenerlo.</h2>
+        <p class="section-subtitle">
+          Para un ciclista aficionado, mejorar no suele depender de una sesión perfecta, sino de acumular entrenamientos de forma regular. Globerus te propone una estructura sencilla según tu objetivo y el tiempo que puedes dedicarle. La meta es que puedas seguir el plan semana a semana y construir constancia, sin convertir el ciclismo en otra obligación imposible.
+        </p>
+      </div>
+
+      <div class="philosophy-mantra">
+        <strong>El plan te da la estructura.</strong>
+        <span>La constancia convierte esa estructura en progreso.</span>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Tarjeta Pro tradicional -->
+        <div class="comp-card comp-card-pro">
+          <div class="comp-badge bad">Lo que suele fallar</div>
+          <h3>Demasiada complejidad, poca continuidad</h3>
+          <ul class="comp-list">
+            <li>
+              <span class="icon-cross">✕</span>
+              <span><strong>Planes difíciles de seguir:</strong> Una planificación demasiado exigente o complicada puede acabar abandonándose.</span>
+            </li>
+            <li>
+              <span class="icon-cross">✕</span>
+              <span><strong>Una sesión perdida parece un fracaso:</strong> Un imprevisto no debería hacerte tirar la semana por la borda.</span>
+            </li>
+            <li>
+              <span class="icon-cross">✕</span>
+              <span><strong>Más datos que hábitos:</strong> Las métricas solo sirven si te ayudan a entrenar de forma regular.</span>
+            </li>
+            <li>
+              <span class="icon-cross">✕</span>
+              <span><strong>Expectativas poco realistas:</strong> No todo aficionado necesita un sistema complejo para empezar a entrenar con estructura.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta Globerus -->
+        <div class="comp-card comp-card-globerus">
+          <div class="comp-badge good">La filosofía Globerus</div>
+          <h3>Estructura sencilla para ganar constancia</h3>
+          <ul class="comp-list">
+            <li>
+              <span class="icon-check">✓</span>
+              <span><strong>Un plan estructurado según tus necesidades:</strong> Tiene en cuenta tu objetivo, tu disponibilidad y tu forma de medir el esfuerzo, sin pretender ser un plan individualizado de entrenador.</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span>
+              <span><strong>Continuidad antes que perfección:</strong> Si surge un imprevisto, puedes usar las opciones de ajuste disponibles y volver a la rutina sin pensar que has fracasado.</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span>
+              <span><strong>Indicaciones claras:</strong> Entrena por vatios, pulso o sensaciones, con una guía sencilla que puedas entender y seguir.</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span>
+              <span><strong>Una herramienta para crear el hábito:</strong> El plan te orienta; la mejora se construye con regularidad, paciencia y recuperación.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANTALLAS PRINCIPALES Y CAPTURAS -->
+  <section id="pantallas" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill-label">Paso a paso</span>
+        <h2>Todo lo que necesitas en la pantalla, sin perderte</h2>
+        <p class="section-subtitle">
+          Estas son pantallas reales de Globerus. Descubre el plan, consulta qué toca entrenar y sigue la evolución de tu preparación. La idea no es perseguir la sesión perfecta, sino mantener una rutina que puedas cumplir.
+        </p>
+      </div>
+
+      <!-- Feature 1: Pantalla Hoy -->
+      <div class="feature-row">
+        <div class="feature-info">
+          <div class="feature-number">01</div>
+          <span class="feature-tag">Inicio sin pérdidas de tiempo</span>
+          <h3>La pantalla "Hoy": motivación y foco</h3>
+          <p>
+            Al abrir la app ves todo lo que te interesa hoy en un solo vistazo. 
+            Sin menús enrevesados ni configuraciones infinitas:
+          </p>
+          <ul class="feature-points">
+            <li><strong>Frase del día:</strong> Un recordatorio motivador para subir puertos sin prisa pero sin pausa (y mensajes especiales el día de tu marcha).</li>
+            <li><strong>Tu marcha en el horizonte:</strong> Nombre de la marcha, días que faltan y tu tiempo objetivo con valoración en tiempo real (por ejemplo, <em>"a tu alcance"</em>).</li>
+            <li><strong>El puerto de tu temporada:</strong> El perfil dibujado de tu preparación. El ciclista marca dónde estás hoy y el punto dónde deberías ir.</li>
+            <li><strong>El tiempo meteorológico:</strong> Previsión del día de tu sesión (lluvia, viento, temperatura mínima, máxima y la prevista a la hora de salida) usando tu ubicación o una localidad fija.</li>
+            <li><strong>Modo siempre visible:</strong> El rayo superior indica tu modo de entreno (vatios, pulso o sensaciones) y te permite cambiarlo en un toque.</li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/hero-hoy.jpg', 'Pantalla Hoy')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/hero-hoy.jpg" alt="Pantalla Hoy en Globerus">
+            </div>
+            <span class="zoom-hint">🔍 Toca para ampliar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Semanas y el milagro del Plan B -->
+      <div class="feature-row reverse">
+        <div class="feature-info">
+          <div class="feature-number">02</div>
+          <span class="feature-tag">Flexibilidad real</span>
+          <h3>Semanas claras, sesiones clave ★ y el bendito "Plan B"</h3>
+          <p>
+            La vida de un cicloturista tiene imprevistos: trabajo, familia, lluvia o un día que simplemente estás cansado. 
+            Globerus se adapta a tu día a día:
+          </p>
+          <ul class="feature-points">
+            <li><strong>Sesiones clave (★ estrella lima):</strong> Identifica las 3 sesiones prioritarias de la semana (la salida larga y las de calidad). Si tu semana se complica, haz al menos esas para no perder forma.</li>
+            <li><strong>Cambiar de día en 1 toque:</strong> Desplaza cualquier sesión a otro día de la semana sin romper la estructura.</li>
+            <li><strong>Ajustar con Plan B:</strong> Reduce la sesión un 30 % (−30 %), pásala a modo suave (todo Zona 2) o conviértela en descanso. El plan recalcula carga y cumplimiento solo.</li>
+            <li><strong>Fuerza en casa o gimnasio:</strong> Rutinas de 20-30 minutos con ejercicios claros para cuidar tu postura y prevenir molestias lumbares o cervicales.</li>
+            <li><strong>Flexibilidad guiada:</strong> Toca las palabras subrayadas de la sesión para ver los ejercicios guiados.</li>
+          </ul>
+        </div>
+        <div class="feature-media two-phones">
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/semanas-plan.jpg', 'Semana del plan y sesiones clave')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/semanas-plan.jpg" alt="Vista de semanas en Globerus">
+            </div>
+            <span class="zoom-hint">🔍 Vista de semana</span>
+          </div>
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/semanas-ajustar.jpg', 'Plan B y Ajustes')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/semanas-ajustar.jpg" alt="Plan B y ajustes en Globerus">
+            </div>
+            <span class="zoom-hint">🔍 Ajustar sesión</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: Entrenar en rodillo -->
+      <div id="rodillo" class="feature-row">
+        <div class="feature-info">
+          <div class="feature-number">03</div>
+          <span class="feature-tag">Compañero de fatigas</span>
+          <h3>Entrenar en rodillo: te habla, te guía y te anima</h3>
+          <p>
+            Los días que toca rodillo entre semana, pon el móvil en el manillar o la mesa y pulsa ▶ <strong>Entrenar</strong>:
+          </p>
+          <ul class="feature-points">
+            <li><strong>Pantalla siempre encendida:</strong> Números grandes para ver tus vatios, pulsaciones o zona de un vistazo mientras sudas.</li>
+            <li><strong>Voz que te avisa:</strong> Te canta el inicio de cada serie, avisa a 10 segundos del final y te dice cuándo descansar.</li>
+            <li><strong>Frases de aliento en el momento justo:</strong> En los últimos segundos de las series duras te suelta ese empujón: <em>"¡Últimos segundos, ya casi está!"</em>.</li>
+            <li><strong>Pitidos 3-2-1 y vibración:</strong> Para que no tengas ni que mirar la pantalla.</li>
+            <li><strong>Se marca sola al terminar:</strong> Si completas al menos el 70 % del tiempo, se da por hecha y te da tu merecida medalla.</li>
+          </ul>
+        </div>
+        <div class="feature-media two-phones">
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/hero-rodillo.jpg', 'Rodillo en vivo')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/hero-rodillo.jpg" alt="Sesión de rodillo guiada con voz">
+            </div>
+            <span class="zoom-hint">🔍 Sesión en rodillo</span>
+          </div>
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/rodillo-completada.jpg', 'Sesión completada')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/rodillo-completada.jpg" alt="Medalla al completar sesión">
+            </div>
+            <span class="zoom-hint">🔍 Medalla conseguida</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4: El seguimiento y tu puerto -->
+      <div class="feature-row reverse">
+        <div class="feature-info">
+          <div class="feature-number">04</div>
+          <span class="feature-tag">Control y motivación</span>
+          <h3>El seguimiento, tu puerto y tus métricas de forma</h3>
+          <p>
+            Basta de hojas de cálculo aburridas y números fríos. En Globerus tienes un seguimiento visual, intuitivo y adaptado a ti:
+          </p>
+          <ul class="feature-points">
+            <li><strong>La gráfica del puerto:</strong> Toda tu temporada dibujada como una gran ascensión. Alterna entre Horas o Carga acumulada y compártela como imagen con tus compañeros.</li>
+            <li><strong>Pestaña Evolución y Forma:</strong> Gráficas semanales de sesiones realizadas (filtrando por sesiones clave ★), horas, kilómetros e iCM. Con métricas avanzadas podrás ver tu Forma, Cansancio, Frescura, FTP y proyección hasta la marcha.</li>
+            <li><strong>Conexión automática con Strava:</strong> Al sincronizar tus salidas, la app marca las sesiones solas y compara en segundos lo previsto frente a lo realizado (horas, intensidad y porcentaje de cumplimiento).</li>
+            <li><strong>El iCM (Índice de Carga de Marcha):</strong> Un indicador clave que te muestra de forma clara cuánto supone cada entrenamiento o salida larga frente a la exigencia total del día de la marcha.</li>
+            <li><strong>Descanso integrado:</strong> Semanas de descarga planificadas para asimilar la carga y llegar en el punto óptimo de frescura.</li>
+          </ul>
+        </div>
+        <div class="feature-media two-phones">
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/hero-puerto.jpg', 'El puerto de la temporada')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/hero-puerto.jpg" alt="El puerto de la temporada en Globerus">
+            </div>
+            <span class="zoom-hint">🔍 Gráfica de tu puerto</span>
+          </div>
+          <div class="single-phone" role="button" tabindex="0" onclick="openModal('img/semanas-strava.jpg', 'Comparación con Strava y cumplimiento')">
+            <div class="phone-mockup sm">
+              <div class="phone-notch"></div>
+              <img src="img/semanas-strava.jpg" alt="Comparación con Strava y cumplimiento en Globerus">
+            </div>
+            <span class="zoom-hint">🔍 Comparación Strava</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- MODOS DE ENTRENO: VATIOS, PULSO Y SENSACIONES -->
+  <section id="modos" class="section section-darker">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill-label">Para todos los presupuestos</span>
+        <h2>Entrena con lo que tengas. Sin necesidad de gastar una fortuna.</h2>
+        <p class="section-subtitle">
+          El plan y la lógica son exactamente los mismos. Cambia la forma en que mides la intensidad: 
+          con potenciómetro, con pulsómetro o simplemente escuchando a tu cuerpo.
+        </p>
+      </div>
+
+      <!-- Selector interactivo de modos -->
+      <div class="modos-tabs">
+        <button class="modo-tab-btn active" data-target="tab-sensaciones">
+          <span class="tab-icon">🚴</span>
+          <span class="tab-title">Sensaciones (1-10)</span>
+          <span class="tab-badge">¡El favorito globero!</span>
+        </button>
+        <button class="modo-tab-btn" data-target="tab-pulso">
+          <span class="tab-icon">❤️</span>
+          <span class="tab-title">Pulso (Pulsómetro)</span>
+          <span class="tab-badge">Pulsaciones ppm</span>
+        </button>
+        <button class="modo-tab-btn" data-target="tab-vatios">
+          <span class="tab-icon">⚡</span>
+          <span class="tab-title">Vatios (Potenciómetro)</span>
+          <span class="tab-badge">FTP y W</span>
+        </button>
+      </div>
+
+      <!-- Contenido Tab 1: Sensaciones -->
+      <div class="modo-content active" id="tab-sensaciones">
+        <div class="modo-grid">
+          <div class="modo-desc-box">
+            <div class="modo-tag">Cero inversión en cacharros</div>
+            <h3>Modo Sensaciones: Sin jerga ni agobios</h3>
+            <p>
+              ¿No tienes potenciómetro de 500 € ni banda de pulso? No te hace falta. Globerus traduce cada entrenamiento a una escala sencilla del 1 al 10 en lenguaje llano:
+            </p>
+            <div class="scale-table">
+              <div class="scale-row">
+                <span class="scale-num num-easy">1 – 2</span>
+                <span class="scale-txt"><strong>Muy suave:</strong> Casi sin esfuerzo, calentar y soltar piernas.</span>
+              </div>
+              <div class="scale-row">
+                <span class="scale-num num-mid">3 – 4</span>
+                <span class="scale-txt"><strong>Suave:</strong> Puedes hablar en frases completas, rodajes largos.</span>
+              </div>
+              <div class="scale-row">
+                <span class="scale-num num-tempo">5</span>
+                <span class="scale-txt"><strong>Algo exigente:</strong> Ritmo alegre, frases cortas.</span>
+              </div>
+              <div class="scale-row">
+                <span class="scale-num num-hard">6 – 7</span>
+                <span class="scale-txt"><strong>Duro pero controlado:</strong> Palabras sueltas, ritmo de subida a puertos.</span>
+              </div>
+              <div class="scale-row">
+                <span class="scale-num num-max">8 – 10</span>
+                <span class="scale-txt"><strong>A tope / Al límite:</strong> Series cortas de esfuerzo máximo.</span>
+              </div>
+            </div>
+            <p class="scale-footer">Al acabar la sesión, registra cómo te has sentido y úsalo como referencia para seguir tu preparación.</p>
+          </div>
+          <div class="modo-img-box">
+            <div class="phone-mockup sm" onclick="openModal('img/modo-sensaciones.jpg', 'Modo Sensaciones en Globerus')">
+              <div class="phone-notch"></div>
+              <img src="img/modo-sensaciones.jpg" alt="Modo Sensaciones sin jerga">
+            </div>
+            <div class="phone-mockup sm" onclick="openModal('img/sensaciones-escala.jpg', 'Escala de sensaciones')">
+              <div class="phone-notch"></div>
+              <img src="img/sensaciones-escala.jpg" alt="Escala de sensaciones 1 al 10">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido Tab 2: Pulso -->
+      <div class="modo-content" id="tab-pulso">
+        <div class="modo-grid">
+          <div class="modo-desc-box">
+            <div class="modo-tag">Para los que llevan banda cardíaca</div>
+            <h3>Modo Pulso: guiado por tus pulsaciones</h3>
+            <p>
+              Entrena con pulsómetro a partir de tu FC máxima (o estimada con <code>220 − edad</code> si no la conoces).
+            </p>
+            <ul class="feature-points">
+              <li><strong>Zonas cardíacas claras:</strong> Zona de recuperación, Zona 2 para fondo, Tempo, Sweet Spot y Umbral.</li>
+              <li><strong>Inteligente con el cuerpo:</strong> Como el pulso tarda 1-2 minutos en reaccionar, las series cortas te indica hacerlas por sensación.</li>
+              <li><strong>Consejos útiles:</strong> Te recuerda que el calor, el cansancio o el café alteran el pulso, y cómo no obsesionarte en las tiradas largas.</li>
+            </ul>
+          </div>
+          <div class="modo-img-box">
+            <div class="phone-mockup sm" onclick="openModal('img/modo-pulso.jpg', 'Modo Pulso en Globerus')">
+              <div class="phone-notch"></div>
+              <img src="img/modo-pulso.jpg" alt="Modo pulso en Globerus">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido Tab 3: Vatios -->
+      <div class="modo-content" id="tab-vatios">
+        <div class="modo-grid">
+          <div class="modo-desc-box">
+            <div class="modo-tag">Para potenciómetro o rodillo smart</div>
+            <h3>Modo Vatios: precisión sin volverse loco</h3>
+            <p>
+              Si tienes potenciómetro en la bici o rodillo inteligente, las sesiones se calculan en vatios a partir de tu FTP:
+            </p>
+            <ul class="feature-points">
+              <li><strong>¿No sabes tu FTP?</strong> El botón <em>"No lo sé"</em> te ayuda a estimarlo de partida.</li>
+              <li><strong>Modo rodillo interactivo:</strong> Barras con los vatios objetivo de cada intervalo.</li>
+            </ul>
+          </div>
+          <div class="modo-img-box">
+            <div class="phone-mockup sm" onclick="openModal('img/semanas-plan.jpg', 'Detalle de sesión por vatios')">
+              <div class="phone-notch"></div>
+              <img src="img/semanas-plan.jpg" alt="Detalle de sesión de vatios en Globerus">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CÓMO SE CONSTRUYE EL PLAN (CÓMO FUNCIONA) -->
+  <section id="como-funciona" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill-label">Puesta en marcha en 2 minutos</span>
+        <h2>¿Cómo se crea tu plan?</h2>
+        <p class="section-subtitle">
+          En unos pocos pasos defines tu objetivo, tu disponibilidad y cómo medirás el esfuerzo. Globerus organiza esa información en un plan estándar y sencillo: una estructura útil para orientarte y ayudarte a entrenar con regularidad, no un entrenamiento individualizado de entrenador personal.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-badge">Paso 1</div>
+          <div class="step-icon">👤</div>
+          <h4>Sobre ti</h4>
+          <p>Eliges tu modo (Vatios, Pulso o Sensaciones), edad, peso y tu FTP o nivel. Si no conoces tu FTP, la app lo estima con «No lo sé».</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">Paso 2</div>
+          <div class="step-icon">🎯</div>
+          <h4>Tu marcha</h4>
+          <p>Indicas el nombre, la fecha, los km, el desnivel y tiempo objetivo (opcional). Globerus calcula el iCM de cada salida y valora si está a tu alcance.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">Paso 3</div>
+          <div class="step-icon">📅</div>
+          <h4>Tu disponibilidad</h4>
+          <p>Pones las horas en tu semana de más carga, qué días puedes salir, si haces rodillo entre semana y si añades trabajo de fuerza en casa o gimnasio.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">Paso 4</div>
+          <div class="step-icon">🏁</div>
+          <h4>Tu plan generado</h4>
+          <p>Estructurado semana a semana por fases (Base, Construcción, Específico, Descarga y Afinado). Puedes conectar Strava y avisos diarios si lo deseas.</p>
+        </div>
+      </div>
+
+      <!-- Caja explicativa de cómo entrena el plan -->
+      <div class="plan-rules-box">
+        <h3>La idea no es hacerlo perfecto: es poder repetirlo</h3>
+        <div class="rules-grid">
+          <div class="rule-item">
+            <strong>Una salida larga a la semana:</strong> Crece progresivamente hasta el 70-80 % del tiempo real que te llevará la marcha.
+          </div>
+          <div class="rule-item">
+            <strong>Semana de descarga automática:</strong> Una semana suave cada 4 semanas (cada 3 a partir de 50 años) para asimilar el trabajo.
+          </div>
+          <div class="rule-item">
+            <strong>Fuerza útil en casa:</strong> 2 días en fase base de gimnasia sencilla (20-30 min) para no acabar con dolores de lumbares o cuello.
+          </div>
+          <div class="rule-item">
+            <strong>Revisiones periódicas:</strong> Cada 6 semanas de carga la app te recuerda revisar tu forma de manera amigable.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOPORTE, COPIA DE SEGURIDAD Y PREGUNTAS FRECUENTES -->
+  <section id="faq" class="section section-darker">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill-label">Soporte y Guía</span>
+        <h2>Instrucciones y Preguntas Frecuentes</h2>
+        <p class="section-subtitle">
+          Todo explicado con claridad para que no tengas dudas ni antes ni durante tu entrenamiento.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>¿Qué es el iCM y para qué sirve?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              El <strong>iCM</strong> significa <em>Índice de Carga frente a la Marcha</em>. Te indica cuánto esfuerzo supone 
+              cada salida en comparación con la exigencia total del día de la marcha. Así sabes si tus tiradas largas 
+              te están preparando adecuadamente para la distancia y el desnivel real de la prueba.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Qué pasa si ayer o esta semana no pude entrenar?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              ¡Absolutamente nada! Puedes usar la función <strong>✎ Ajustar</strong> para 
+              cambiar la sesión a otro día o elegir una alternativa (hacerla más corta, más suave o descanso).
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Es obligatorio tener Strava o un ciclocomputador caro?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              No. Strava es completamente opcional. Si lo conectas, tus salidas se marcan solas; pero si no lo tienes, 
+              puedes marcar las casillas de bici, gimnasio y flexibilidad a mano con un solo toque. Tampoco necesitas 
+              potenciómetro: puedes usar el <strong>Modo Sensaciones</strong> (del 1 al 10) o el <strong>Modo Pulso</strong>.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Puedo importar un plan desde Excel o una hoja de cálculo?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Sí. Si tu entrenador te pasa un plan o prefieres diseñarlo tú en una hoja de cálculo, Globerus te permite 
+              descargar una plantilla e importarlo fácilmente desde <em>Ajustes → Plan y marcha → Hoja de cálculo</em>.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Cómo funciona la copia de seguridad y la privacidad de mis datos?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Tus datos se guardan en tu propio móvil y cuentan con <strong>copia automática en tu cuenta de Google Drive</strong> (gestionada por Android una vez al día con wifi y cargando). Globerus no tiene servidores externos ni almacena tus planes ni cuentas. Si cambias de móvil e instalas Globerus desde Google Play con tu cuenta, tu plan se recupera solo. Además, en <em>Ajustes → Ayuda, copia y soporte</em> puedes guardar o restaurar una copia manual en un archivo en cualquier momento.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Cómo contacto con soporte si tengo algún problema?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              En la app, dentro de <em>Ayuda, copia y soporte</em>, tienes el botón <strong>Escribir a soporte</strong>. 
+              Te abrirá directamente el correo con el ID de tu plan (ej. <code>GLB-RV9N-55</code>) para que te ayudemos de inmediato. 
+              También puedes escribir directamente a: 
+              <a href="mailto:soporte@globerus.com" class="faq-mail-link">soporte@globerus.com</a>.
+            </p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- Tarjeta de contacto de soporte -->
+      <div class="support-card">
+        <div class="support-info">
+          <h3>¿Necesitas ayuda con tu plan o con la app?</h3>
+          <p>Estamos aquí para ayudarte, escríbenos directamente.</p>
+        </div>
+        <div class="support-action">
+          <a href="mailto:soporte@globerus.com" class="btn btn-secondary">
+            <span>✉️ soporte@globerus.com</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRUEBA GRATIS Y PRECIO TRANSPARENTE -->
+  <section id="prueba" class="section">
+    <div class="container">
+      <div class="pricing-wrapper">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <span class="pill-label">Lanzamiento en preparación</span>
+            <h2>Descubre como funciona</h2>
+            <p>
+              Google Play
+            </p>
+          </div>
+
+          <div class="pricing-body">
+            <div class="price-box">
+              <span class="price-val">4,99</span>
+              <span class="price-currency">€</span>
+              <span class="price-period">pago único por preparación</span>
+            </div>
+            <p class="price-guarantee">El modelo previsto es de 21 días de prueba y después 4,99 € por preparación, sin cuotas mensuales.</p>
+
+            <ul class="pricing-features">
+              <li><span>✔</span> <strong>21 días de prueba gratuita</strong> con el 100 % de funciones activas.</li>
+              <li><span>✔</span> Sin suscripciones ni cuotas recurrentes: pago único de 4,99 € hasta tu marcha.</li>
+              <li><span>✔</span> Guía de voz en rodillo con aviso de intervalos, cuenta atrás y frases de aliento.</li>
+              <li><span>✔</span> Modo vatios, pulso o sensaciones (1-10) para entrenar con lo que tengas.</li>
+              <li><span>✔</span> Sesiones clave (★ estrella lima) y ajuste con "Plan B" cuando la semana se complique.</li>
+              <li><span>✔</span> Previsión del tiempo en tus sesiones (ubicación o localidad fija).</li>
+              <li><span>✔</span> El puerto de tu temporada, métricas de evolución y tarjeta FINISHER oficial para compartir.</li>
+              <li><span>✔</span> Privacidad total y copia de seguridad automática con tu cuenta de Google.</li>
+            </ul>
+
+            <div class="pricing-cta-box">
+              <a href="#proximamente" onclick="openLaunchModal(event)" class="btn btn-primary btn-lg btn-icon-row btn-google-play">
+                <img src="img/google-play-store-badge.svg" alt="Google Play" class="btn-play-badge-img">
+                <span class="btn-text">Descubre cómo funciona</span>
+              </a>
+              <span class="cta-note">Google Play (Lanzamiento en breve)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVISO MÉDICO -->
+  <section class="section-notice">
+    <div class="container">
+      <div class="notice-card">
+        <span class="notice-icon">⚠️</span>
+        <div class="notice-text">
+          <strong>Aviso médico y de seguridad:</strong> Las estimaciones de tiempo, ritmos y mejoras son orientativas. 
+          Escucha siempre a tu cuerpo: si notas mareo, dolor en el pecho o malestar, para de inmediato. 
+          Consulta a un médico antes de iniciar cualquier plan de entrenamiento deportivo exigente.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="#" class="brand">
+          <img src="img/logo.png" alt="Globerus Icon" class="brand-logo-img">
+          <span class="logo-text">globerus</span>
+        </a>
+        <p class="footer-slogan">Un plan ciclista sencillo para preparar tu próximo reto con constancia, pedalada a pedalada.</p>
+        <p class="footer-version">Globerus App para Android</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Navegación</strong>
+          <a href="#filosofia">Filosofía</a>
+          <a href="#pantallas">Pantallas</a>
+          <a href="#rodillo">Rodillo con voz</a>
+          <a href="#modos">Modos de entreno</a>
+        </div>
+        <div class="footer-col">
+          <strong>Soporte</strong>
+          <a href="#faq">Preguntas Frecuentes</a>
+          <a href="mailto:soporte@globerus.com">soporte@globerus.com</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#prueba">Desbloquear por 4,99 €</a>
+        </div>
+        <div class="footer-col">
+          <strong>Legal</strong>
+          <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+          <a href="politica-de-privacidad.html">Política de privacidad</a>
+          <a href="politica-de-cookies.html">Política de cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Globerus. Todos los derechos reservados. Diseñado para ciclistas que solo queremos disfrutar.</p>
+      <p class="cf-badge">Preparando el lanzamiento para Android</p>
+    </div>
+  </footer>
+
+  <!-- MODAL / LIGHTBOX PARA VER CAPTURAS EN GRANDE -->
+  <div class="modal-backdrop" id="imageModal" aria-hidden="true" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()" aria-label="Cerrar ventana">✕</button>
+      <img id="modalImg" src="" alt="Captura ampliada">
+      <p class="modal-caption" id="modalCaption"></p>
+    </div>
+  </div>
+
+  <!-- MODAL INFORMATIVO: PRÓXIMAMENTE DISPONIBLE -->
+  <div class="modal-backdrop" id="launchModal" aria-hidden="true" onclick="closeLaunchModal()">
+    <div class="launch-modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeLaunchModal()" aria-label="Cerrar aviso">✕</button>
+      <div class="launch-badge">🚀 Próximamente</div>
+      <h3 class="launch-title">¡Globerus estará disponible muy pronto!</h3>
+      <p class="launch-desc">
+        Estamos ultimando los detalles para el lanzamiento oficial de Globerus en Google Play.
+      </p>
+      <div class="launch-support-box">
+        <p class="launch-support-text">
+          Si estás interesado en probar la aplicación o ser de los primeros en acceder cuando esté disponible, escríbenos a:
+        </p>
+        <a href="mailto:soporte@globerus.com?subject=Interesado%20en%20el%20acceso%20a%20Globerus" class="launch-email-btn">
+          <span>✉️ soporte@globerus.com</span>
+        </a>
+      </div>
+      <button type="button" class="btn btn-secondary btn-launch-ok" onclick="closeLaunchModal()">Entendido</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
