@@ -71,21 +71,19 @@ Cloudflare Pages aloja sitios web estáticos de forma **gratuita**, ultra rápid
    - Al tocar cualquier captura de pantalla se abre un visor (lightbox) para ver todos los detalles.
 5. **Sección de Soporte y Preguntas Frecuentes (FAQ):**
    - Acordeones interactivos con las dudas comunes (iCM, Strava, AEMET, copias de seguridad).
-   - Contacto directo a `soporte.globerus@gmail.com`.
-6. **Transparencia en el precio:**
-   - 21 días de prueba gratuita.
-   - 4,99 € pago único para toda tu preparación (sin cuotas mensuales recurrentes).
+   - Contacto directo a `soporte@globerus.com`.
+6. **Acceso 100 % gratuito:**
+   - Sin suscripciones mensuales ni cuotas recurrentes.
+   - Todas las funciones abiertas para preparar tu marcha cicloturista.
 
 ---
 
 ## 🛠️ Personalizaciones habituales
 
-- **Cambiar el correo de soporte:**
-  Busca `soporte.globerus@gmail.com` en `index.html` y reemplázalo por el buzón definitivo que utilices.
-- **Cambiar el precio o días de prueba:**
-  En `index.html`, busca `4,99` o `21 días` para actualizarlo cuando lo necesites.
+- **Correo de soporte:**
+  `soporte@globerus.com` para consultas sobre la app o el lanzamiento.
 - **Añadir el enlace de descarga de la APK / Google Play:**
-  En la sección `#prueba`, reemplaza el enlace del botón principal por el enlace directo de descarga o a la ficha de Google Play Store.
+  En la sección `#descarga`, reemplaza el enlace del botón principal por el enlace directo de descarga o a la ficha pública de Google Play Store.
 
 
 ## Cambios de la versión preparada para el lanzamiento

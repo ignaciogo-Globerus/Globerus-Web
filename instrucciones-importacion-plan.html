@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrucciones para la importación del plan (CSV) — Globerus</title>
+  <meta name="description" content="Guía paso a paso y plantilla oficial para importar tu plan de entrenamiento en Globerus desde Excel o Google Sheets mediante un archivo CSV.">
+  <meta name="theme-color" content="#121820">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="apple-touch-icon" href="img/logo.png">
+</head>
+<body class="legal-page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="img/logo.png" alt="Globerus Icon" class="brand-logo-img">
+        <span class="logo-text">globerus</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html">← Volver al inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="legal-main">
+    <div class="container legal-container">
+      <span class="pill-label">Guía Técnica · Hoja de cálculo</span>
+      <h1 class="legal-title">Importar tu plan desde una hoja de cálculo (CSV)</h1>
+      <p class="legal-updated">Con un CSV cargas en Globerus el plan de tu entrenador o el tuyo propio, día a día, y entrenas cada sesión en el rodillo con la voz guiándote.</p>
+
+      <div class="legal-body">
+
+        <!-- Pasos iniciales -->
+        <section class="legal-section">
+          <h2>Pasos para importar</h2>
+          <ol class="import-steps-list">
+            <li><strong>Pulsa Ayuda y plantilla:</strong> estás en esta página (globerus.com) con la plantilla oficial y las instrucciones completas. <br><a href="plantilla-plan-globerus.csv" download class="btn-download-inline">📥 Descargar plantilla CSV de ejemplo</a></li>
+            <li><strong>Rellena la plantilla en Google Sheets o Excel:</strong> una fila por día con entreno. Deja la primera fila (los títulos) tal cual.</li>
+            <li><strong>Descárgala como CSV:</strong> en Google Sheets ve a <em>Archivo → Descargar → Valores separados por comas (.csv)</em>. En Excel: <em>Guardar como → CSV (delimitado por comas)</em>.</li>
+            <li><strong>Pulsa Importar plan desde hoja de cálculo:</strong> en la app Globerus (<em>Ajustes → Plan y marcha → Hoja de cálculo</em>) y elige el archivo descargado.</li>
+            <li><strong>Revisa el resumen:</strong> comprueba días, sesiones y filas con avisos; completa el nombre, fecha, km y desnivel de tu marcha y pulsa <strong>Crear plan y usarlo</strong>.</li>
+          </ol>
+          <div class="import-notice-box">
+            <strong>⚠️ Atención:</strong> Si ya tienes un plan en marcha, importar lo sustituye: sale <em>«Sustituye tu plan»</em>, se cambian todas las sesiones y se borran sus marcas y cambios de día. El botón se llama <strong>Sustituir mi plan</strong> y después tienes la opción <em>Deshacer</em> hasta que cierres la app.
+          </div>
+        </section>
+
+        <!-- SECCIÓN DESTACADA: ASISTENCIA CON IA -->
+        <section class="legal-section ai-prompt-section">
+          <div class="ai-banner">
+            <span class="ai-tag">💡 ¿Tienes tu plan en PDF, texto o imagen?</span>
+            <h2 class="ai-title">Pide a cualquier Inteligencia Artificial que te cree el CSV en 5 segundos</h2>
+            <p class="ai-desc">
+              No pierdas tiempo escribiendo a mano fila por fila. Apóyate en cualquier IA (ChatGPT, Claude, Gemini, Copilot...). Copia este prompt exacto, pégalo en el chat junto con tu plan de entrenamiento y te devolverá el código CSV listo para guardar:
+            </p>
+
+            <div class="prompt-box-wrapper">
+              <div class="prompt-box-header">
+                <span>📋 Prompt oficial para Inteligencias Artificiales</span>
+                <button type="button" class="btn-copy-prompt" onclick="copyPromptToClipboard()">Copiar Prompt</button>
+              </div>
+              <pre class="prompt-code-block" id="promptText"><code>Actúa como un conversor experto de planes de entrenamiento de ciclismo a formato CSV estructurado para una aplicación de rodillo por voz. 
+
+Tu objetivo es leer el plan de entrenamiento que te proporcionaré al final y generar un archivo CSV (delimitado por comas `,`) estrictamente adaptado a las siguientes reglas técnicas de importación.
+
+---
+
+### REGLAS DE LAS COLUMNAS (Primera fila = Títulos exactos)
+Las columnas obligatorias y opcionales son:
+1. Fecha (Obligatoria): Formato YYYY-MM-DD (ej. 2027-01-18) o DD/MM/YYYY. Las filas sin fecha válida se ignoran.
+2. Sesión (Obligatoria si hay entreno): El título del entrenamiento (ej. "Series del entrenador", "Rodaje Largo").
+3. Tipo: Solo para casos especiales (Descanso, Estiramientos o Movilidad, Gimnasio, Marcha, Zona 2/Suave, Tempo, Sweet spot, Umbral, VO2 máx). Si se deja vacío, la app lo calcula.
+4. Duración (min): Solo si NO hay Pasos (crea sesión en zona 2). Si hay Pasos, déjalo vacío (la app los suma solos).
+5. Descripción: Texto explicativo de la sesión.
+6. Pasos (% FTP): Estructura detallada de intervalos (ver sintaxis abajo).
+7. Gimnasio: "B" para rutina B, cualquier otro valor para rutina A (o déjalo vacío).
+8. Fase: Etiqueta de la semana (Base, Construcción, Específico, Afinado) en la primera fila de cada semana.
+
+---
+
+### SINTAXIS ESTRICTA DE LA COLUMNA "PASOS (% FTP)"
+- Bloques separados por barra vertical `|` (OBLIGATORIO usar `|` en vez de punto y coma para evitar conflictos con el CSV).
+- Cada paso: [duración] [espacio] [% FTP o rango].
+- Formatos de duración válidos:
+  - Minutos: `15'` (admite decimales como `2,5'`)
+  - Segundos: `30"`
+  - Horas: `3h`
+  - Horas y minutos: `1h30`, `1h05` (los minutos SIEMPRE con 2 cifras, prohibido `1h 30'` ni `15m` ni `15min`).
+- Tipos de bloques permitidos:
+  - Paso suelto: `15' 60%`
+  - Series con recuperación: `4x8' 95-100% r4' 55%` (Significa 4 repeticiones de 8 min con 4 min de recuperación entre medias. Sin recuperación tras la última).
+  - Bloque repetido: `2x(30" 120% + 15" 50%)` (Pasos unidos con `+` dentro del paréntesis).
+  - Repetición sin pausa: `3x5' 90%`
+
+---
+
+### FORMATO DE SALIDA
+- Devuelve **únicamente** el texto plano en formato CSV dentro de un bloque de código markdown, listo para copiar y guardar como archivo `.csv`.
+- No añadas explicaciones adicionales antes ni después del CSV, solo el código del CSV.
+
+---
+
+### PLAN DE ENTRENAMIENTO A CONVERTIR:
+[PEGA AQUÍ TU PLAN DE ENTRENAMIENTO]</code></pre>
+            </div>
+            <div id="copyAlert" class="copy-success-msg" style="display: none;">¡Prompt copiado al portapapeles! Listo para pegar en tu IA favorita.</div>
+          </div>
+        </section>
+
+        <!-- Tabla de columnas -->
+        <section class="legal-section">
+          <h2>Estructura de las Columnas</h2>
+          <p>La primera fila de tu hoja de cálculo debe contener exactamente estos encabezados:</p>
+          <div class="table-responsive-box">
+            <table class="csv-table">
+              <thead>
+                <tr>
+                  <th>Columna</th>
+                  <th>Obligatoria</th>
+                  <th>Qué se espera</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Fecha</strong></td>
+                  <td><span class="badge-req">Sí</span></td>
+                  <td><code>2027-01-18</code> o <code>18/01/2027</code>. Los días sin fila quedan registrados como «Día libre».</td>
+                  <td><code>2027-01-18</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Sesión</strong></td>
+                  <td><span class="badge-req">Sí, o Pasos</span></td>
+                  <td>El título o nombre que identifica la sesión.</td>
+                  <td>Series del entrenador</td>
+                </tr>
+                <tr>
+                  <td><strong>Tipo</strong></td>
+                  <td><span class="badge-opt">No</span></td>
+                  <td><code>Descanso</code>, <code>Estiramientos</code>, <code>Movilidad</code>, <code>Gimnasio</code>, <code>Marcha</code>; o fuerza la zona: <code>Zona 2</code>, <code>Tempo</code>, <code>Sweet spot</code>, <code>Umbral</code>, <code>VO2 máx</code>. Vacío = la zona se calcula de los Pasos.</td>
+                  <td><code>Descanso</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Duración (min)</strong></td>
+                  <td><span class="badge-opt">No</span></td>
+                  <td>Solo se usa si no hay Pasos: crea una sesión continua de zona 2 de esa duración en minutos.</td>
+                  <td><code>90</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Descripción</strong></td>
+                  <td><span class="badge-opt">No</span></td>
+                  <td>Texto informativo que se muestra en el detalle de la sesión.</td>
+                  <td>Cadencia alta</td>
+                </tr>
+                <tr>
+                  <td><strong>Pasos (% FTP)</strong></td>
+                  <td><span class="badge-opt">No</span></td>
+                  <td>La estructura detallada de intervalos de la sesión. <strong>Es lo que activa el rodillo guiado por voz paso a paso</strong>.</td>
+                  <td><code>15' 60% | 4x8' 95-100% r4' 55% | 10' 50%</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Gimnasio</strong></td>
+                  <td><span class="badge-opt">No</span></td>
+                  <td>Cualquier valor añade trabajo de fuerza; <code>B</code> = rutina B, cualquier otro valor = rutina A.</td>
+                  <td><code>A</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Fase</strong></td>
+                  <td><span class="badge-opt">No</span></td>
+                  <td>Etiqueta de la fase de la semana: <code>Base</code>, <code>Construcción</code>, <code>Específico</code>, <code>Afinado</code>.</td>
+                  <td><code>Construcción</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            * La fecha de la marcha cicloturista es la última fila que tenga como Tipo <code>Marcha</code> (o la última fila del archivo). El plan puede abarcar hasta 60 semanas completas.
+          </p>
+        </section>
+
+        <!-- Cómo escribir los Pasos -->
+        <section class="legal-section">
+          <h2>Cómo escribir los Pasos (% FTP)</h2>
+          <p>
+            Una sesión es una lista de bloques separados por barra vertical <code>|</code> (o punto y coma <code>;</code>). Cada paso se compone de <strong>duración + espacio + % de FTP</strong>.
+          </p>
+
+          <h3>1. Formato de la Duración</h3>
+          <div class="table-responsive-box">
+            <table class="csv-table sm">
+              <thead>
+                <tr>
+                  <th>Duración escrita</th>
+                  <th>Significado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>15'</code></td>
+                  <td>15 minutos (admite decimales: <code>2,5'</code>)</td>
+                </tr>
+                <tr>
+                  <td><code>30"</code></td>
+                  <td>30 segundos</td>
+                </tr>
+                <tr>
+                  <td><code>3h</code> · <code>1h30</code></td>
+                  <td>3 horas · 1 hora 30 minutos (los minutos siempre con 2 cifras: <code>1h05</code>)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>2. Formato de la Intensidad (% FTP)</h3>
+          <p>
+            La intensidad se indica como <code>60%</code> (porcentaje fijo) o como rango <code>95-100%</code>. <br>
+            <strong class="text-danger">Importante:</strong> no son válidos formatos como <em>15 min</em>, <em>30s</em>, <em>1h 30'</em> ni <em>8'95%</em> (sin espacio).
+          </p>
+
+          <h3>3. Tipos de Bloques permitidos</h3>
+          <div class="table-responsive-box">
+            <table class="csv-table">
+              <thead>
+                <tr>
+                  <th>Bloque</th>
+                  <th>Ejemplo</th>
+                  <th>Qué hace en la app</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Paso suelto</strong></td>
+                  <td><code>15' 60%</code></td>
+                  <td>Un tramo continuo a esa intensidad.</td>
+                </tr>
+                <tr>
+                  <td><strong>Series con recuperación</strong></td>
+                  <td><code>4x8' 95-100% r4' 55%</code></td>
+                  <td>4 series de 8 minutos con 4 minutos de recuperación entre ellas (no después de la última serie).</td>
+                </tr>
+                <tr>
+                  <td><strong>Bloque repetido</strong></td>
+                  <td><code>2x(30" 120% + 15" 50%)</code></td>
+                  <td>Repite el bloque entero entre paréntesis tantas veces como indique el multiplicador.</td>
+                </tr>
+                <tr>
+                  <td><strong>Repetición seguida</strong></td>
+                  <td><code>3x5' 90%</code></td>
+                  <td>3 tramos iguales consecutivos sin pausa intermedia.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="import-info-box">
+            <h4>¿Cómo interpreta esto Globerus?</h4>
+            <p>
+              La app asigna automáticamente el nombre a cada paso según su porcentaje de potencia (<em>Recuperación, Zona 2, Tempo, Sweet spot, Umbral, VO2 máx</em>) y marca de forma inteligente el calentamiento y la vuelta a la calma.
+            </p>
+            <p>
+              Durante el rodillo, <strong>el asistente de voz anuncia cada fase</strong>, te canta el número de serie (<em>«Serie 3 de 4»</em>, <em>«¡Última serie!»</em>) y emite pitidos y cuenta atrás en los últimos 10 segundos. Si configuras la app para entrenar por pulso o sensaciones, introduce igualmente los porcentajes: la app se encarga de traducirlos automáticamente.
+            </p>
+            <p class="text-warning">
+              <strong>Atención a la sintaxis:</strong> Si un bloque está mal formulado, se descartarán todos los pasos de esa fila y se tomará únicamente el valor de la columna Duración (o quedará como día libre). La coma no se utiliza para separar pasos (ej. <code>15' 60%, 10' 70%</code> es incorrecto; debe ser <code>15' 60% | 10' 70%</code>).
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="index.html" class="brand">
+          <img src="img/logo.png" alt="Globerus Icon" class="brand-logo-img">
+          <span class="logo-text">globerus</span>
+        </a>
+        <p class="footer-slogan">Un plan ciclista sencillo para preparar tu próximo reto con constancia.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Navegación</strong>
+          <a href="index.html#filosofia">Filosofía</a>
+          <a href="index.html#pantallas">Pantallas</a>
+          <a href="index.html#rodillo">Rodillo con voz</a>
+          <a href="index.html#modos">Modos de entreno</a>
+        </div>
+        <div class="footer-col">
+          <strong>Ayuda y Plantillas</strong>
+          <a href="instrucciones-importacion-plan.html">Instrucciones importación CSV</a>
+          <a href="plantilla-plan-globerus.csv" download>Descargar plantilla CSV</a>
+          <a href="mailto:soporte@globerus.com">soporte@globerus.com</a>
+        </div>
+        <div class="footer-col">
+          <strong>Legal</strong>
+          <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+          <a href="politica-de-privacidad.html">Política de privacidad</a>
+          <a href="politica-de-cookies.html">Política de cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Globerus. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyPromptToClipboard() {
+      const promptText = document.getElementById('promptText').innerText;
+      navigator.clipboard.writeText(promptText).then(() => {
+        const alertBox = document.getElementById('copyAlert');
+        alertBox.style.display = 'block';
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 4000);
+      }).catch(err => {
+        console.error('Error al copiar: ', err);
+      });
+    }
+  </script>
+</body>
+</html>
