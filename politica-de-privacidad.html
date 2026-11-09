@@ -33,25 +33,26 @@
     <div class="container legal-container">
       <span class="pill-label">Protección de Datos · RGPD & LOPDGDD</span>
       <h1 class="legal-title">Política de Privacidad</h1>
-      <p class="legal-updated">Última actualización: 5 de noviembre de 2026</p>
+      <p class="legal-updated">Última actualización: 9 de noviembre de 2026</p>
 
       <div class="legal-body">
         <section class="legal-section">
           <h2>1. Responsable del Tratamiento</h2>
           <p>
-            De conformidad con el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se informa que el responsable del tratamiento de los datos en relación con la aplicación <strong>Globerus</strong> es el equipo de desarrollo de Globerus, con dirección de contacto: <a href="mailto:soporte@globerus.com">soporte@globerus.com</a>.
+            De conformidad con el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), el responsable del tratamiento de los datos de la aplicación <strong>Globerus</strong> es el desarrollador de Globerus, con dirección de contacto: <a href="mailto:soporte@globerus.com">soporte@globerus.com</a>.
           </p>
         </section>
 
         <section class="legal-section highlight-box">
           <h2>2. Principio fundamental: Privacidad y almacenamiento local</h2>
           <p>
-            <strong>Globerus no tiene servidores centrales que recojan o almacenen tus datos personales.</strong> La aplicación está diseñada bajo el principio de minimización de datos:
+            <strong>Globerus no tiene servidores ni bases de datos que almacenen tus datos personales.</strong> La aplicación está diseñada bajo el principio de minimización de datos:
           </p>
           <ul>
             <li>No requiere registro, ni cuenta de usuario, ni correo electrónico para funcionar.</li>
             <li>Toda la información de tus entrenamientos (edad, peso, FTP, pulsaciones, fechas de marchas y valoraciones de sensaciones) <strong>reside exclusivamente de forma local en la memoria de tu dispositivo Android</strong>.</li>
-            <li>Globerus no vende, no comercializa ni comparte tus datos deportivos con terceros ni con redes de publicidad.</li>
+            <li>Para algunas funciones la app utiliza servicios intermediarios que reenvían la petición sin guardar nada (ver apartado 5).</li>
+            <li>Globerus no vende, no comercializa ni comparte tus datos deportivos con terceros ni con redes de publicidad, y no los utiliza para entrenar sistemas de inteligencia artificial.</li>
           </ul>
         </section>
 
@@ -61,38 +62,68 @@
           <ul>
             <li><strong>Perfil físico básico:</strong> Edad, peso aproximado y estimación de umbral de potencia (FTP) o frecuencia cardíaca máxima. Finalidad: calcular las zonas de entrenamiento orientativas y las adaptaciones del plan.</li>
             <li><strong>Parámetros del reto deportivo:</strong> Fecha de tu marcha cicloturista, distancia (km) y desnivel positivo acumulado. Finalidad: calendarizar la curva de carga y descanso.</li>
-            <li><strong>Conexión voluntaria con Strava:</strong> Si decides conectar Strava voluntariamente, la app recibe tus actividades deportivas realizadas para sincronizar los entrenamientos. Solo se conservan completas las actividades de los últimos 7 días; de periodos anteriores se preserva un resumen disociado de volumen y cumplimiento. Al desconectar Strava desde Ajustes, todos los datos importados de Strava se eliminan de tu móvil de forma inmediata.</li>
-            <li><strong>Ubicación aproximada para meteorología:</strong> Si activas la opción de consultar el tiempo meteorológico mediante ubicación, el sistema operativo consulta las coordenadas aproximadas (radio aproximado de 1 km) únicamente para solicitar la predicción del clima del municipio. <strong>Globerus nunca almacena ni rastrea tu historial de ubicación</strong>.</li>
+            <li><strong>Conexión voluntaria con Strava:</strong> Si decides conectar Strava, la app recibe tus actividades para marcar automáticamente las sesiones realizadas. Los permisos de acceso (tokens) se guardan solo en tu móvil. Solo se conservan completas las actividades de los últimos 7 días; de periodos anteriores se conserva únicamente un resumen (horas, carga y sesiones cumplidas). Si borras una actividad en Strava, desaparece de la app en la siguiente actualización. Tus datos de Strava solo se muestran a ti. Al desconectar Strava desde Ajustes, la app revoca el acceso y elimina de tu móvil, de forma inmediata, todos los datos procedentes de Strava, incluido el resumen.</li>
+            <li><strong>Ubicación aproximada para meteorología:</strong> Si eliges «Mi ubicación» para el tiempo, la app obtiene coordenadas aproximadas (redondeadas a unos 1 km) únicamente para solicitar la previsión. También puedes elegir una localidad a mano. <strong>Globerus nunca almacena ni rastrea tu ubicación</strong>: solo guarda la localidad elegida o la opción «Mi ubicación».</li>
+            <li><strong>Identificador del plan:</strong> Cada plan tiene un código aleatorio (por ejemplo, GLB-XXXX-XX) que no te identifica. Se envía una vez a nuestro servicio intermediario para obtener un sello con la fecha de creación del plan, que se guarda en tu móvil. Finalidad: conservar las condiciones de uso de los planes creados mientras la app es gratuita.</li>
           </ul>
         </section>
 
         <section class="legal-section">
-          <h2>4. Copias de seguridad automáticas (Google Drive)</h2>
+          <h2>4. Base jurídica</h2>
+          <ul>
+            <li><strong>Consentimiento</strong> (art. 6.1.a RGPD): al aceptar las condiciones de uso, al conectar Strava y al activar la ubicación.</li>
+            <li><strong>Datos relativos a la salud</strong> (peso, frecuencia cardíaca máxima): se tratan con tu <strong>consentimiento explícito</strong> (art. 9.2.a RGPD), solo en tu dispositivo y solo para calcular tu plan.</li>
+            <li>Puedes retirar el consentimiento en cualquier momento: desconectando Strava, quitando el permiso de ubicación en Android, borrando el plan o desinstalando la app.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>5. Servicios de terceros e intermediarios</h2>
+          <ul>
+            <li><strong>Strava</strong> (Strava, Inc.): solo si lo conectas. Se rige también por la política de privacidad de Strava.</li>
+            <li><strong>Cloudflare</strong> (Cloudflare, Inc.) y, como respaldo, <strong>Netlify</strong> (Netlify, Inc.): reenvían las peticiones de autorización de Strava, las consultas del tiempo y la solicitud del sello del plan. No almacenan estos datos.</li>
+            <li><strong>WeatherAPI.com</strong>: recibe la localidad elegida o la ubicación aproximada para devolver la previsión.</li>
+            <li><strong>Google</strong>: copia de seguridad de Android (apartado 6) y distribución de la app en Google Play.</li>
+          </ul>
           <p>
-            Para evitar la pérdida de tu plan en caso de cambio, avería o pérdida de teléfono, la app aprovecha el sistema nativo de <strong>Copia de seguridad de Android en Google Drive</strong>.
-          </p>
-          <p>
-            Dicha copia se almacena cifrada en el espacio privado de tu propia cuenta de Google personal. Globerus no tiene acceso ni claves para leer ni consultar esa copia desde fuera de tu dispositivo móvil. Además, tienes a tu disposición en la app la posibilidad de exportar un archivo de copia manual de forma voluntaria.
+            Algunos de estos proveedores pueden tratar datos fuera del Espacio Económico Europeo. En ese caso lo hacen con las garantías previstas en el RGPD (cláusulas contractuales tipo de la Comisión Europea o decisiones de adecuación).
           </p>
         </section>
 
         <section class="legal-section">
-          <h2>5. Datos financieros y ausencia de pagos</h2>
+          <h2>6. Copias de seguridad</h2>
+          <p>
+            Para evitar la pérdida de tu plan en caso de cambio, avería o pérdida de teléfono, la app utiliza la <strong>copia de seguridad nativa de Android en tu cuenta de Google</strong>. Dicha copia se almacena en el espacio privado de tu propia cuenta de Google. Globerus no tiene acceso a ella.
+          </p>
+          <p>
+            Además, la app guarda una copia de tu plan en tu móvil, en el archivo <strong>Descargas/Globerus/globerus_auto_backup.json</strong>. Ese archivo solo sale de tu dispositivo si tú lo envías con la opción «Enviar copia». Ninguna de las copias incluye datos de Strava.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>7. Plazo de conservación</h2>
+          <p>
+            Los datos se conservan en tu dispositivo mientras uses la app y hasta que borres el plan, borres los datos de la app o la desinstales. Los datos de Strava se conservan como se indica en el apartado 3 y se eliminan al desconectar Strava.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>8. Datos financieros y ausencia de pagos</h2>
           <p>
             Globerus es una aplicación gratuita y no solicita, procesa ni almacena datos bancarios, números de tarjeta de crédito ni información financiera de ningún tipo.
           </p>
         </section>
 
         <section class="legal-section">
-          <h2>6. Derechos de los usuarios (ARCO+)</h2>
+          <h2>9. Derechos de los usuarios</h2>
           <p>
-            El RGPD y la LOPDGDD otorgan al usuario los derechos de acceso, rectificación, supresión (derecho al olvido), limitación del tratamiento, portabilidad y oposición.
+            El RGPD y la LOPDGDD otorgan al usuario los derechos de acceso, rectificación, supresión (derecho al olvido), limitación del tratamiento, portabilidad y oposición, así como el derecho a retirar el consentimiento en cualquier momento.
           </p>
           <p>
-            Al almacenarse los datos en local, usted tiene el control total sobre ellos: puede modificar cualquier dato desde los menús de <em>Ajustes</em> de la app o borrar completamente la información simplemente eliminando los datos de la app o desinstalando la aplicación de su dispositivo.
+            Al almacenarse los datos en local, usted tiene el control total sobre ellos: puede modificar cualquier dato desde los menús de <em>Ajustes</em> de la app, exportarlos con «Enviar copia» o borrar completamente la información eliminando los datos de la app o desinstalándola.
           </p>
           <p>
-            Para cualquier duda sobre el tratamiento de sus derechos o consultas técnicas, puede escribir a: <a href="mailto:soporte@globerus.com">soporte@globerus.com</a>. Asimismo, tiene derecho a presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos (AEPD)</a> si considera vulnerados sus derechos.
+            Para cualquier duda sobre el tratamiento de sus datos o el ejercicio de sus derechos, puede escribir a: <a href="mailto:soporte@globerus.com">soporte@globerus.com</a>. Asimismo, tiene derecho a presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos (AEPD)</a> si considera vulnerados sus derechos.
           </p>
         </section>
       </div>
