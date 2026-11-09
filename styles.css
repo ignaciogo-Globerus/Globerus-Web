@@ -359,6 +359,11 @@ a {
   color: var(--lime);
 }
 
+.strava-word {
+  color: #FC4C02;
+  font-weight: 700;
+}
+
 .perk-item strong {
   color: var(--text-main);
 }
