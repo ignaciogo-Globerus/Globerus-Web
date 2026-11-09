@@ -33,33 +33,25 @@
     <div class="container legal-container">
       <span class="pill-label">Guía Técnica · Hoja de cálculo</span>
       <h1 class="legal-title">Importar tu plan desde una hoja de cálculo (CSV)</h1>
-      <p class="legal-updated">Con un CSV cargas en Globerus el plan de tu entrenador o el tuyo propio, día a día, y entrenas cada sesión en el rodillo con la voz guiándote.</p>
+      <p class="legal-updated">Con un archivo CSV cargas en Globerus el plan de tu entrenador o el tuyo propio, día a día, y entrenas cada sesión en el rodillo con la voz guiándote.</p>
 
       <div class="legal-body">
-
-        <!-- Pasos iniciales -->
-        <section class="legal-section">
-          <h2>Pasos para importar</h2>
-          <ol class="import-steps-list">
-            <li><strong>Pulsa Ayuda y plantilla:</strong> estás en esta página (globerus.com) con la plantilla oficial y las instrucciones completas. <br><a href="Globerus_plantilla_plan.csv" download="Globerus_plantilla_plan.csv" class="btn-download-inline">📥 Descargar plantilla CSV de ejemplo</a></li>
-            <li><strong>Rellena la plantilla en Google Sheets o Excel:</strong> una fila por día con entreno. Deja la primera fila (los títulos) tal cual.</li>
-            <li><strong>Descárgala como CSV:</strong> en Google Sheets ve a <em>Archivo → Descargar → Valores separados por comas (.csv)</em>. En Excel: <em>Guardar como → CSV (delimitado por comas)</em>.</li>
-            <li><strong>Pulsa Importar plan desde hoja de cálculo:</strong> en la app Globerus (<em>Ajustes → Plan y marcha → Hoja de cálculo</em>) y elige el archivo descargado.</li>
-            <li><strong>Revisa el resumen:</strong> comprueba días, sesiones y filas con avisos; completa el nombre, fecha, km y desnivel de tu marcha y pulsa <strong>Crear plan y usarlo</strong>.</li>
-          </ol>
-          <div class="import-notice-box">
-            <strong>⚠️ Atención:</strong> Si ya tienes un plan en marcha, importar lo sustituye: sale <em>«Sustituye tu plan»</em>, se cambian todas las sesiones y se borran sus marcas y cambios de día. El botón se llama <strong>Sustituir mi plan</strong> y después tienes la opción <em>Deshacer</em> hasta que cierres la app.
-          </div>
-        </section>
 
         <!-- SECCIÓN DESTACADA: ASISTENCIA CON IA -->
         <section class="legal-section ai-prompt-section">
           <div class="ai-banner">
-            <span class="ai-tag">💡 ¿Tienes tu plan en PDF, texto o imagen?</span>
-            <h2 class="ai-title">Pide a cualquier Inteligencia Artificial que te cree el CSV en 5 segundos</h2>
+            <span class="ai-tag">⭐ Opción recomendada · la más rápida</span>
+            <h2 class="ai-title">Crea el CSV con cualquier Inteligencia Artificial</h2>
             <p class="ai-desc">
-              No pierdas tiempo escribiendo a mano fila por fila. Apóyate en cualquier IA (ChatGPT, Claude, Gemini, Copilot...). Copia este prompt exacto, pégalo en el chat junto con tu plan de entrenamiento y te devolverá el código CSV listo para guardar:
+              Tengas tu plan en PDF, en texto, en una foto o en un Excel de tu entrenador, no hace falta escribirlo fila a fila. Cualquier IA (ChatGPT, Claude, Gemini, Copilot…) lo convierte al formato de Globerus en unos segundos:
             </p>
+            <ol class="import-steps-list">
+              <li><strong>Copia el prompt</strong> con el botón «Copiar Prompt».</li>
+              <li><strong>Pégalo en el chat de la IA</strong> y, al final, donde pone <em>[PEGA AQUÍ TU PLAN DE ENTRENAMIENTO]</em>, pega o adjunta tu plan.</li>
+              <li><strong>Guarda la respuesta como archivo .csv:</strong> si la IA te ofrece descargar el archivo, descárgalo. Si solo te da el texto, cópialo en el Bloc de notas (o en una nota del móvil) y guárdalo como <code>plan.csv</code>.</li>
+              <li><strong>Impórtalo en Globerus:</strong> <em>Ajustes → Guardar y cargar plan → Cargar plan desde hoja de cálculo → Importar</em> y elige el archivo.</li>
+              <li><strong>Revisa el resumen</strong> (días, sesiones y filas con avisos), completa el nombre, la fecha, los km y el desnivel de tu marcha y pulsa <strong>Crear plan y usarlo</strong>.</li>
+            </ol>
 
             <div class="prompt-box-wrapper">
               <div class="prompt-box-header">
@@ -113,6 +105,23 @@ Las columnas obligatorias y opcionales son:
             <div id="copyAlert" class="copy-success-msg" style="display: none;">¡Prompt copiado al portapapeles! Listo para pegar en tu IA favorita.</div>
           </div>
         </section>
+
+        <!-- Opción manual -->
+        <section class="legal-section">
+          <h2>Si prefieres hacerlo a mano</h2>
+          <p>También puedes rellenar tú la plantilla en una hoja de cálculo. Las columnas y la forma de escribir los pasos se explican más abajo.</p>
+          <ol class="import-steps-list">
+            <li><strong>Descarga la plantilla:</strong> <br><a href="Globerus_plantilla_plan.csv" download="Globerus_plantilla_plan.csv" class="btn-download-inline">📥 Descargar plantilla CSV de ejemplo</a></li>
+            <li><strong>Rellena la plantilla en Google Sheets o Excel:</strong> una fila por día con entreno. Deja la primera fila (los títulos) tal cual.</li>
+            <li><strong>Descárgala como CSV:</strong> en Google Sheets ve a <em>Archivo → Descargar → Valores separados por comas (.csv)</em>. En Excel: <em>Guardar como → CSV (delimitado por comas)</em>.</li>
+            <li><strong>Pulsa Importar plan desde hoja de cálculo:</strong> en la app Globerus (<em>Ajustes → Guardar y cargar plan → Cargar plan desde hoja de cálculo → Importar</em>) y elige el archivo descargado.</li>
+            <li><strong>Revisa el resumen:</strong> comprueba días, sesiones y filas con avisos; completa el nombre, fecha, km y desnivel de tu marcha y pulsa <strong>Crear plan y usarlo</strong>.</li>
+          </ol>
+        </section>
+
+        <div class="import-notice-box">
+          <strong>⚠️ Si ya tienes un plan en marcha:</strong> importar lo sustituye. La app avisa con <em>«Se borrará tu plan…»</em>: el plan importado entra como un plan nuevo y se borran las sesiones, marcas y cambios de día del anterior. El botón se llama <strong>Sustituir mi plan</strong> y, si te arrepientes, tienes <em>Deshacer</em> hasta que cierres la app.
+        </div>
 
         <!-- Tabla de columnas -->
         <section class="legal-section">
